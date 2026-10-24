@@ -60,6 +60,8 @@ branch must never run at once. Mutual exclusion is handled by the GitHub Actions
 [`concurrency`](https://docs.github.com/en/actions/using-jobs/using-concurrency)
 group in the calling workflow — **not** by the action itself:
 
+For example, when `target-branch` is `staging`, use:
+
 ```yaml
 concurrency:
   group: merge-pr-to-branch-staging
